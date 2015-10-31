@@ -14,11 +14,11 @@ razz.init = function(){
 
 razz.render = function(Component, props){
   var domEl = document.getElementById("test");
-  var reactEl = ReactDOM.render(
+  ReactDOM.render(
     React.createElement(Component, props),
     domEl
   );
-  return reactEl;
+  return domEl;
 };
 
 module.exports = razz;

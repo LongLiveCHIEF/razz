@@ -1,4 +1,4 @@
-var NonJsxComponent = require("./non-jsx-component.js");
+var Greeting = require("./greeting.js");
 var razz = require("../index.js");
 var Zepto = require("zepto-node");
 
@@ -19,8 +19,15 @@ describe("razz", function(){
   });
 
   it("renders basic react components to the dom", function(){
-    razz.render(NonJsxComponent);
-    var el = $(".non-jsx");
-    expect(el).to.have.$class("non-jsx");
+    var el = $(razz.render(Greeting));
+    expect(el).to.have.$text("Hello, world.");
+  });
+
+  it("renders components with props to the dom", function(){
+    var el = $(razz.render(Greeting, {
+      message: "G'day,",
+      name: "mate"
+    }));
+    expect(el).to.have.$text("G'day, mate.")
   });
 });
