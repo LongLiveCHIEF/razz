@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
+    "lint": "eslint .",
+    "pre-commit": "npm run lint && npm run test",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "mocha test/index-spec.js",
     "watch": "mocha test/index-spec.js -w"
@@ -30,6 +32,7 @@
     "commitizen": "^2.3.0",
     "cz-conventional-changelog": "^1.1.4",
     "eslint": "^1.8.0",
+    "ghooks": "^0.3.2",
     "mocha": "^2.3.3",
     "semantic-release": "^4.3.5",
     "zepto-node": "^1.0.0"
@@ -40,8 +43,13 @@
   "dependencies": {
     "domino": "^1.0.19"
   },
-  "peerDependencies":{
+  "peerDependencies": {
     "react": ">= 0.14.0",
     "react-dom": ">= 0.14.0"
+  },
+  "config":{
+    "ghooks":{
+      "pre-commit": "npm run pre-commit"
+    }
   }
 }
