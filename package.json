@@ -5,7 +5,8 @@
   "scripts": {
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "mocha index-spec.js -w"
+    "test": "mocha index-spec.js",
+    "watch": "mocha index-spec.js -w"
   },
   "repository": {
     "type": "git",
