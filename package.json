@@ -34,5 +34,8 @@
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "dependencies": {
+    "domino": "^1.0.19"
   }
 }
