@@ -1,0 +1,36 @@
+{
+  "name": "razz",
+  "description": "React component testing without all the fuss.",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekytime/razz.git"
+  },
+  "keywords": [
+    "react",
+    "test",
+    "jest",
+    "mocha"
+  ],
+  "author": "Chris Jaynes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geekytime/razz/issues"
+  },
+  "homepage": "https://github.com/geekytime/razz#readme",
+  "devDependencies": {
+    "commitizen": "^2.3.0",
+    "cz-conventional-changelog": "^1.1.4",
+    "eslint": "^1.8.0",
+    "mocha": "^2.3.3",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cs-conventional-changelog"
+  }
+}
