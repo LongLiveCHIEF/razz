@@ -13,7 +13,7 @@ razz.init = function(){
 };
 
 razz.render = function(Component, props){
-  var domEl = document.getElementById("test");
+  var domEl = global.document.getElementById("test");
   ReactDOM.render(
     React.createElement(Component, props),
     domEl
