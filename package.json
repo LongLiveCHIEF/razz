@@ -5,8 +5,8 @@
   "scripts": {
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "mocha index-spec.js",
-    "watch": "mocha index-spec.js -w"
+    "test": "mocha test/index-spec.js",
+    "watch": "mocha test/index-spec.js -w"
   },
   "repository": {
     "type": "git",
@@ -26,16 +26,22 @@
   "homepage": "https://github.com/geekytime/razz#readme",
   "devDependencies": {
     "chai": "^3.4.0",
+    "chai-jq": "0.0.8",
     "commitizen": "^2.3.0",
     "cz-conventional-changelog": "^1.1.4",
     "eslint": "^1.8.0",
     "mocha": "^2.3.3",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^4.3.5",
+    "zepto-node": "^1.0.0"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
   "dependencies": {
     "domino": "^1.0.19"
+  },
+  "peerDependencies":{
+    "react": ">= 0.14.0",
+    "react-dom": ">= 0.14.0"
   }
 }
